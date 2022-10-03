@@ -85,6 +85,9 @@ DATABASES = {
         'PASSWORD':'',
         'HOST':'',
         'PORT':'',
+        'OPTIONS': {
+            'read_default_file': '/db.sqlite3',
+        },
     }
 }
 
