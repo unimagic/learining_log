@@ -128,6 +128,7 @@ BOOTSTRAP3={
     'include_jquery':True,
 }
 #heroku配置
+STATIC_ROOT='staticfiles'
 cwd=os.getcwd()
 if cwd=='/app' or cwd[:4]=='/tmp':
     import dj_database_url
@@ -141,7 +142,7 @@ if cwd=='/app' or cwd[:4]=='/tmp':
     DEBUG = False
     #静态资产配置
     BASE_DIR=os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT='staticfiles'
+    
     STATICFILES_DIRS=(
         os.path.join(BASE_DIR,'static')
     )
