@@ -133,7 +133,7 @@ cwd=os.getcwd()
 if cwd=='/app' or cwd[:4]=='/tmp':
     import dj_database_url
     DATABASES={
-        'default':dj_database_url.config(default='postgres://localhost')
+        'default':dj_database_url.config(default='sqlite://db.sqlite3')
     }
     #让request.is_secure()承认X-Forwarded-Proto头
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
